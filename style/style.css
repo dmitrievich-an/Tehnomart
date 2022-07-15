@@ -459,11 +459,9 @@ img {
   right: -19px;
   display: inline-block;
   vertical-align: top;
-  border: 19px solid #fff;
+  border: 19px solid transparent;
+  border-right: 0 #fff;
   border-left-color: #ee3643;
-  border-right-width: 0;
-  border-top-color: transparent;
-  border-bottom-color: transparent;
 }
 
 .popular-brand__list {
@@ -641,7 +639,9 @@ img {
   text-decoration: none;
 }
 
-.footer-nav__link:hover {
+.footer-nav__link:hover,
+.footer-features__link:hover,
+.footer-connect__link:hover {
   text-decoration: underline;
 }
 
@@ -698,6 +698,10 @@ img {
   list-style: none;
   padding: 0;
   margin: 0 auto;
+}
+
+.footer-social__item:hover .social-img {
+  fill: var(--basic-red);
 }
 
 .footer-connect {
