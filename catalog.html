@@ -14,13 +14,13 @@
   <header class="header">
     <div class="header__wrapper_blue">
       <div class="header-top container">
-        <img class="header__logo" src="img/logo-technomart.svg" alt="Логотип Техномарт">
+        <a href="index.html"><img class="header__logo" src="img/logo-technomart.svg" alt="Логотип Техномарт"></a>
         <label for="header__search"></label>
         <input class="header__search" type="search" placeholder="Поиск:" id="header__search">
         <ul class="header__button-list">
-          <li class="header__button-item">Закладки: 0</li>
-          <li class="header__button-item">Корзина: 10</li>
-          <li class="header__button-item">Оформить заказ</li>
+          <li class="header__button-item"><a class="header__button-link favorites" href="#">Закладки: 0</a></li>
+          <li class="header__button-item"><a class="header__button-link cart" href="#">Корзина: 10</a></li>
+          <li class="header__button-item"><a class="header__button-link order" href="#">Оформить заказ</a></li>
         </ul>
       </div>
     </div>
@@ -32,7 +32,7 @@
       </div>
       <div class="header__user-buttons">
         <div class="header__user-links">
-          <a href="" class="header__username-btn">Артем Нарыжных</a>
+          <a href="https://vk.com/artem_989" class="header__username-btn" target="_blank">Артем Нарыжных</a>
           <a href="" class="header__logout-btn">
             <div class="svg-wrapper">
               <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -45,11 +45,22 @@
           </a>
         </div>
         <ul class="header__user-nav">
-          <li class="header__user-item">Мои заказы</li>
-          <li class="header__user-item">Личный кабинет</li>
+          <li class="header__user-item"><a href="#" class="header__user-link">Мои заказы</a></li>
+          <li class="header__user-item"><a href="#" class="header__user-link">Личный кабинет</a></li>
         </ul>
       </div>
     </div>
+    <nav class="header__nav nav container">
+      <ul class="header__nav-list">
+        <li class="header__nav-item"><a href="index.html" class="header__nav-link">Главная</a></li>
+        <li class="header__nav-item"><a href="#" class="header__nav-link">Компания</a></li>
+        <li class="header__nav-item"><a href="#" class="header__nav-link">Каталог</a></li>
+        <li class="header__nav-item"><a href="#" class="header__nav-link">Новости</a></li>
+        <li class="header__nav-item"><a href="#" class="header__nav-link">Спецпредложения</a></li>
+        <li class="header__nav-item"><a href="#" class="header__nav-link">Доставка</a></li>
+        <li class="header__nav-item"><a href="#" class="header__nav-link">Контакты</a></li>
+      </ul>
+    </nav>
   </header>
   <main class="main">
 
