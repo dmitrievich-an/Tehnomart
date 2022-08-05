@@ -15,8 +15,17 @@
     <div class="header__wrapper_blue">
       <div class="header-top container">
         <a href="index.html"><img class="header__logo" src="img/logo-technomart.svg" alt="Логотип Техномарт"></a>
-        <label for="header__search"></label>
-        <input class="header__search" type="search" placeholder="Поиск:" id="header__search">
+        <div class="header__search-wrapper">
+          <label for="header__search">
+            <input class="header__search" type="search" placeholder="Поиск:" id="header__search">
+
+            <svg class="header__search-icon" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z"
+                    fill="white"/>
+            </svg>
+          </label>
+        </div>
         <ul class="header__button-list">
           <li class="header__button-item"><a class="header__button-link favorites" href="#">Закладки: 0</a></li>
           <li class="header__button-item"><a class="header__button-link cart" href="#">Корзина: 10</a></li>
@@ -35,7 +44,7 @@
           <a href="https://vk.com/artem_989" class="header__username-btn" target="_blank">Артем Нарыжных</a>
           <a href="" class="header__logout-btn">
             <div class="svg-wrapper">
-              <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="header__logout-icon" width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M20 8.5L11.125 0V6H5.125V11H11.125V17L20 8.5Z" fill="#C5C5C5"/>
                 <path
                   d="M2.10604 13.952V3.048C2.12404 2.672 2.27704 1.991 3.11604 1.991H8.14304V0H3.11604C0.938036 0 0.112036 1.81 0.0870361 3.027V13.973C0.112036 15.189 0.938036 17 3.11604 17H8.14304V15.01H3.11604C2.27704 15.01 2.12404 14.327 2.10604 13.952Z"
