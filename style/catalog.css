@@ -509,6 +509,12 @@ legend {
   margin-bottom: 15px;
 }
 
+label,
+.checkbox__input,
+.checkbox__radio {
+  cursor: pointer;
+}
+
 .filter__button {
   font-family: 'PT Sans', sans-serif;
   font-size: 13px;
@@ -591,6 +597,21 @@ legend {
   background-color: var(--basic-red);
   margin: 0 45px 21px;
   padding: 10px 0;
+  border-radius: 3px 0 0 3px;
+  position: relative;
+  box-shadow: 0 4px 4px rgb(0 0 0 / 25%);
+}
+
+.card__current-price::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -19px;
+  display: inline-block;
+  vertical-align: top;
+  border: 19px solid transparent;
+  border-right: 0 #fff;
+  border-left-color: #ee3643;
 }
 
 .main__description {
