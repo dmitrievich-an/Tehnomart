@@ -88,30 +88,40 @@
           <form class="filter" method="get" action="https://echo.htmlacademy.ru">
             <fieldset class="price-filter">
               <legend>Цена:</legend>
-              <div class="plug">Удалить этот класс!!!</div>
+              <div class="plug">Здесь будет фильтр по цене</div>
             </fieldset>
             <fieldset class="manufacturer">
               <legend>Производители:</legend>
               <ul class="filter__manufacturer-list">
                 <li class="filter__manufacturer-item">
-                  <input class="checkbox__input" type="checkbox" name="bosh" id="bosh" checked>
-                  <label class="checkbox__label" for="bosh">Bosh</label>
+                  <label class="checkbox__label" for="bosh">
+                    <input class="checkbox__input" type="checkbox" name="bosh" id="bosh" disabled checked>
+                    <span class="check__box">Bosh</span>
+                  </label>
                 </li>
                 <li class="filter__manufacturer-item">
-                  <input class="checkbox__input" type="checkbox" name="interskol" id="interskol">
-                  <label class="checkbox__label" for="interskol">Интерскол</label>
+                  <label class="checkbox__label" for="interskol">
+                    <input class="checkbox__input" type="checkbox" name="interskol" id="interskol">
+                    <span class="check__box">Интерскол</span>
+                  </label>
                 </li>
                 <li class="filter__manufacturer-item">
-                  <input class="checkbox__input" type="checkbox" name="makita" id="makita" checked>
-                  <label class="checkbox__label" for="makita">Makita</label>
+                  <label class="checkbox__label" for="makita">
+                    <input class="checkbox__input" type="checkbox" name="makita" id="makita" checked>
+                    <span class="check__box">Makita</span>
+                  </label>
                 </li>
                 <li class="filter__manufacturer-item">
-                  <input class="checkbox__input" type="checkbox" name="dewalt" id="dewalt">
-                  <label class="checkbox__label" for="dewalt">Dewalt</label>
+                  <label class="checkbox__label" for="dewalt">
+                    <input class="checkbox__input" type="checkbox" name="dewalt" id="dewalt">
+                    <span class="check__box">Dewalt</span>
+                  </label>
                 </li>
                 <li class="filter__manufacturer-item">
-                  <input class="checkbox__input" type="checkbox" name="hitachi" id="hitachi">
-                  <label class="checkbox__label" for="hitachi">Hitachi</label>
+                  <label class="checkbox__label" for="hitachi">
+                    <input class="checkbox__input" type="checkbox" name="hitachi" id="hitachi" disabled>
+                    <span class="check__box">Hitachi</span>
+                  </label>
                 </li>
               </ul>
             </fieldset>
@@ -119,12 +129,16 @@
               <legend>Питание:</legend>
               <ul class="power__list">
                 <li class="power__item">
-                  <input class="checkbox__radio" type="radio" name="power-type" value="battery" id="battery" checked>
-                  <label class="radio__label" for="battery">Аккумуляторные</label>
+                  <label class="radio__label" for="battery">
+                    <input class="checkbox__radio" type="radio" name="power-type" value="battery" id="battery">
+                    <span class="radio__box">Аккумуляторные</span>
+                  </label>
                 </li>
                 <li class="power__item">
-                  <input class="checkbox__radio" type="radio" name="power-type" value="socket" id="socket">
-                  <label class="radio__label" for="socket">Сетевые</label>
+                  <label class="radio__label" for="socket">
+                    <input class="checkbox__radio" type="radio" name="power-type" value="socket" id="socket" checked>
+                    <span class="radio__box">Сетевые</span>
+                  </label>
                 </li>
               </ul>
             </fieldset>
@@ -132,19 +146,30 @@
           </form>
         </div>
         <div class="column__right">
-          <div class="form-description right">Сортировка:</div>
+          <div class="form-description right">
+            <span class="right__title">Сортировка:</span>
+            <ul class="right__list">
+              <li class="right__item">По цене</li>
+              <li class="right__item">По типу</li>
+              <li class="right__item">По функционалу</li>
+            </ul>
+            <ul class="right__arrow-list arrow-list">
+              <li class="arrow-item">
+                <img src="img/icons/icon-up.svg" alt="Сортировка по возрастанию">
+              </li>
+              <li class="arrow-item">
+                <img src="img/icons/icon-down.svg" alt="Сортировка по убыванию">
+              </li>
+            </ul>
+          </div>
           <div class="catalog__list">
             <div class="catalog__card card">
               <div class="card__preview">
                 <img class="card__photo" src="img/products/bfg-6000.png" alt="BFG 6000">
               </div>
-              <p class="card__title">Перфоратор BOSCH<br>BFG 6000</p>
-              <p class="card__old-price price">30500 р.</p>
-              <p class="card__current-price price">25500 р.</p>
-            </div>
-            <div class="catalog__card card">
-              <div class="card__preview">
-                <img class="card__photo" src="img/products/bfg-6000.png" alt="BFG 6000">
+              <div class="card__buttons buttons">
+                <button class="buttons__buy buttons__hidden"><span class="buttons__buy_text">Купить</span></button>
+                <button class="buttons__bookmarks buttons__hidden">В закладки</button>
               </div>
               <p class="card__title">Перфоратор BOSCH<br>BFG 6000</p>
               <p class="card__old-price price">30500 р.</p>
@@ -153,6 +178,22 @@
             <div class="catalog__card card">
               <div class="card__preview">
                 <img class="card__photo" src="img/products/bfg-6000.png" alt="BFG 6000">
+              </div>
+              <div class="card__buttons buttons">
+                <button class="buttons__buy buttons__hidden"><span class="buttons__buy_text">Купить</span></button>
+                <button class="buttons__bookmarks buttons__hidden">В закладки</button>
+              </div>
+              <p class="card__title">Перфоратор BOSCH<br>BFG 6000</p>
+              <p class="card__old-price price">30500 р.</p>
+              <p class="card__current-price price">25500 р.</p>
+            </div>
+            <div class="catalog__card card">
+              <div class="card__preview">
+                <img class="card__photo" src="img/products/bfg-6000.png" alt="BFG 6000">
+              </div>
+              <div class="card__buttons buttons">
+                <button class="buttons__buy buttons__hidden"><span class="buttons__buy_text">Купить</span></button>
+                <button class="buttons__bookmarks buttons__hidden">В закладки</button>
               </div>
               <p class="card__title">Перфоратор BOSCH<br>BFG 6000</p>
               <p class="card__old-price price">30500 р.</p>
@@ -162,6 +203,10 @@
               <div class="card__preview">
                 <img class="card__photo" src="img/products/bfg-2000-3000.jpg" alt="BFG 3000">
               </div>
+              <div class="card__buttons buttons">
+                <button class="buttons__buy buttons__hidden"><span class="buttons__buy_text">Купить</span></button>
+                <button class="buttons__bookmarks buttons__hidden">В закладки</button>
+              </div>
               <p class="card__title">Перфоратор BOSCH<br>BFG 3000</p>
               <p class="card__old-price price">22500 р.</p>
               <p class="card__current-price price">15500 р.</p>
@@ -170,6 +215,10 @@
               <div class="card__preview">
                 <img class="card__photo" src="img/products/bfg-6000.png" alt="BFG 6000">
               </div>
+              <div class="card__buttons buttons">
+                <button class="buttons__buy buttons__hidden"><span class="buttons__buy_text">Купить</span></button>
+                <button class="buttons__bookmarks buttons__hidden">В закладки</button>
+              </div>
               <p class="card__title">Перфоратор BOSCH<br>BFG 6000</p>
               <p class="card__old-price price">30500 р.</p>
               <p class="card__current-price price">25500 р.</p>
@@ -177,6 +226,10 @@
             <div class="catalog__card card">
               <div class="card__preview">
                 <img class="card__photo" src="img/products/bfg-2000-3000.jpg" alt="BFG 2000">
+              </div>
+              <div class="card__buttons buttons">
+                <button class="buttons__buy buttons__hidden"><span class="buttons__buy_text">Купить</span></button>
+                <button class="buttons__bookmarks buttons__hidden">В закладки</button>
               </div>
               <p class="card__title">Перфоратор BOSCH<br>BFG 2000</p>
               <p class="card__current-price price">12500 р.</p>
@@ -185,6 +238,10 @@
               <div class="card__preview">
                 <img class="card__photo" src="img/products/bfg-2000-3000.jpg" alt="BFG 3000">
               </div>
+              <div class="card__buttons buttons">
+                <button class="buttons__buy buttons__hidden"><span class="buttons__buy_text">Купить</span></button>
+                <button class="buttons__bookmarks buttons__hidden">В закладки</button>
+              </div>
               <p class="card__title">Перфоратор BOSCH<br>BFG 3000</p>
               <p class="card__old-price price">22500 р.</p>
               <p class="card__current-price price">15500 р.</p>
@@ -193,6 +250,10 @@
               <div class="card__preview">
                 <img class="card__photo" src="img/products/bfg-6000.png" alt="BFG 6000">
               </div>
+              <div class="card__buttons buttons">
+                <button class="buttons__buy buttons__hidden"><span class="buttons__buy_text">Купить</span></button>
+                <button class="buttons__bookmarks buttons__hidden">В закладки</button>
+              </div>
               <p class="card__title">Перфоратор BOSCH<br>BFG 6000</p>
               <p class="card__old-price price">30500 р.</p>
               <p class="card__current-price price">25500 р.</p>
@@ -200,6 +261,10 @@
             <div class="catalog__card card">
               <div class="card__preview">
                 <img class="card__photo" src="img/products/bfg-2000-3000.jpg" alt="BFG 2000">
+              </div>
+              <div class="card__buttons buttons">
+                <button class="buttons__buy buttons__hidden"><span class="buttons__buy_text">Купить</span></button>
+                <button class="buttons__bookmarks buttons__hidden">В закладки</button>
               </div>
               <p class="card__title">Перфоратор BOSCH<br>BFG 2000</p>
               <p class="card__current-price price">12500 р.</p>
