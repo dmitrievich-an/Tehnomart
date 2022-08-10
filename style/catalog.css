@@ -666,12 +666,13 @@ label,
   flex-grow: 1;
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 30px;
 }
 
 .catalog__card {
   width: 220px;
   margin-right: 20px;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   background-color: var(--basic-white);
@@ -811,6 +812,47 @@ label,
   border: 19px solid transparent;
   border-right: 0 #fff;
   border-left-color: #ee3643;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.pagination__list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin-bottom: 60px;
+  /*column-gap: 10px;*/
+}
+
+.pagination__item {
+  margin-right: 10px;
+}
+
+.pagination__text {
+  display: inline-block;
+  padding: 10px 15px;
+  border: 1px solid #E5E5E5;
+  border-radius: 2px;
+}
+
+.pagination__check:checked + .pagination__text {
+  border-color: var(--basic-red);
+  background-color: var(--basic-red);
+  color: var(--basic-white);
+}
+
+.pagination__check:hover + .pagination__text {
+  border-color: #C5C5C5;
+}
+
+.pagination__check:checked:hover + .pagination__text {
+  border-color: var(--basic-red);
 }
 
 .main__description {

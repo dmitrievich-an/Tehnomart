@@ -82,7 +82,7 @@
         <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Перфораторы</a></li>
       </ul>
       <h1 class="main__title">Перфораторы</h1>
-      <section class="main__catalog catalog">
+      <section class="main__catalog">
         <div class="catalog__filter column-left">
           <div class="form-description left">Фильтр:</div>
           <form class="filter" method="get" action="https://echo.htmlacademy.ru">
@@ -95,7 +95,7 @@
               <ul class="filter__manufacturer-list">
                 <li class="filter__manufacturer-item">
                   <label class="checkbox__label" for="bosh">
-                    <input class="checkbox__input" type="checkbox" name="bosh" id="bosh" disabled checked>
+                    <input class="checkbox__input" type="checkbox" name="bosh" id="bosh" checked>
                     <span class="check__box">Bosh</span>
                   </label>
                 </li>
@@ -145,7 +145,7 @@
             <button class="filter__button" type="submit">Показать</button>
           </form>
         </div>
-        <div class="column__right">
+        <div class="column__right catalog">
           <div class="form-description right">
             <span class="right__title">Сортировка:</span>
             <ul class="right__list">
@@ -270,7 +270,28 @@
               <p class="card__current-price price">12500 р.</p>
             </div>
           </div>
-          <!--          Добавить список страниц с выделением активной-->
+          <div class="catalog__pagination pagination">
+            <ul class="pagination__list">
+              <li class="pagination__item">
+                <label class="pagination__label">
+                  <input type="radio" name="pagination"  class="pagination__check visually-hidden" checked>
+                  <span class="pagination__text">1</span>
+                </label>
+              </li>
+              <li class="pagination__item">
+                <label>
+                  <input type="radio" name="pagination"  class="pagination__check visually-hidden">
+                  <span class="pagination__text">2</span>
+                </label>
+              </li>
+              <li class="pagination__item">
+                <label>
+                  <input type="radio" name="pagination" class="pagination__check visually-hidden">
+                  <span class="pagination__text">3</span>
+                </label>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
     </div>
