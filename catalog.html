@@ -83,12 +83,27 @@
       </ul>
       <h1 class="main__title">Перфораторы</h1>
       <section class="main__catalog">
-        <div class="catalog__filter column-left">
+        <div class="column-left catalog__filter">
           <div class="form-description left">Фильтр:</div>
           <form class="filter" method="get" action="https://echo.htmlacademy.ru">
             <fieldset class="price-filter">
               <legend>Цена:</legend>
-              <div class="plug">Здесь будет фильтр по цене</div>
+              <div class="price-filter__line line">
+                <div class="line__band">
+                  <div class="line__band_green"></div>
+                </div>
+                <div class="line__key line__key_min"></div>
+                <div class="line__key line__key_max"></div>
+              </div>
+              <div class="price-filter__inputs price-inp">
+                <label>
+                  <input type="number" class="price-inp__input price-inp__input_min" value="0">
+                </label>
+                <span class="price-inp__text">—</span>
+                <label>
+                  <input type="number" class="price-inp__input price-inp__input_max" value="27500">
+                </label>
+              </div>
             </fieldset>
             <fieldset class="manufacturer">
               <legend>Производители:</legend>
@@ -188,6 +203,9 @@
               <p class="card__current-price price">25500 р.</p>
             </div>
             <div class="catalog__card card">
+              <div class="card__new">
+                <span class="card__new-text">NEW</span>
+              </div>
               <div class="card__preview">
                 <img class="card__photo" src="img/products/bfg-6000.png" alt="BFG 6000">
               </div>
@@ -200,6 +218,9 @@
               <p class="card__current-price price">25500 р.</p>
             </div>
             <div class="catalog__card card">
+              <div class="card__new">
+                <span class="card__new-text">NEW</span>
+              </div>
               <div class="card__preview">
                 <img class="card__photo" src="img/products/bfg-2000-3000.jpg" alt="BFG 3000">
               </div>
@@ -235,6 +256,9 @@
               <p class="card__current-price price">12500 р.</p>
             </div>
             <div class="catalog__card card">
+              <div class="card__new">
+                <span class="card__new-text">NEW</span>
+              </div>
               <div class="card__preview">
                 <img class="card__photo" src="img/products/bfg-2000-3000.jpg" alt="BFG 3000">
               </div>
@@ -259,6 +283,9 @@
               <p class="card__current-price price">25500 р.</p>
             </div>
             <div class="catalog__card card">
+              <div class="card__new">
+                <span class="card__new-text">NEW</span>
+              </div>
               <div class="card__preview">
                 <img class="card__photo" src="img/products/bfg-2000-3000.jpg" alt="BFG 2000">
               </div>

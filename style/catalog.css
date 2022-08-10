@@ -451,13 +451,6 @@ fieldset {
   margin-bottom: 20px;
 }
 
-.plug {
-  height:100px;
-  background-color: var(--special-sand);
-  text-align: center;
-  line-height: 100px;
-}
-
 .manufacturer,
 .price-filter {
   padding-bottom: 26px;
@@ -513,6 +506,77 @@ fieldset {
 .filter {
   display: flex;
   flex-direction: column;
+}
+
+.line {
+  height:80px;
+  background-color: var(--special-sand);
+  border-radius: 3px;
+  padding: 39px 20px;
+  position: relative;
+  margin-bottom: 9px;
+}
+
+.line__band{
+  height: 2px;
+  background-color: #D7DCDE;
+}
+
+.line__band_green {
+  width: 70%;
+  height: 100%;
+  background-color: #5da055;
+}
+
+.line__key {
+  width: 20px;
+  height: 20px;
+  background-color: #ABABAB;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 30px;
+  cursor: pointer;
+}
+
+.line__key_min {
+  left: 10px;
+}
+
+.line__key_max {
+  left: calc(10px + 126px);
+}
+
+.price-inp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*Скрытие стрелок у input number*/
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none; // Yeah, yeah everybody write about it
+}
+
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+  appearance: none;
+  -moz-appearance: textfield;
+}
+
+.price-inp__input {
+  width: 95px;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  text-align: center;
+  padding: 10px 0;
+  background-color: var(--special-sand);
+  border-radius: 3px;
+  border: none;
+  outline: none;
 }
 
 .power {
@@ -678,6 +742,8 @@ label,
   background-color: var(--basic-white);
   text-align: center;
   border: 1px solid rgba(234, 234, 234, 1);
+  position: relative;
+  overflow: hidden;
 }
 
 .catalog__card:hover {
@@ -686,6 +752,23 @@ label,
 
 .catalog__card:nth-child(3n) {
   margin-right: 0;
+}
+
+.card__new {
+  display: block;
+  width: 100px;
+  height: 30px;
+  background-color: var(--basic-red);
+  position: absolute;
+  top: 8px;
+  right: -27px;
+  transform: rotate(45deg);
+}
+
+.card__new-text {
+  font-size: 14px;
+  line-height: 30px;
+  color: var(--basic-white);
 }
 
 .card__preview {
