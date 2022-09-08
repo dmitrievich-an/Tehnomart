@@ -531,44 +531,134 @@ img {
   box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.25);
 }
 
-.services {
-  background: rgba(241, 245, 247, 1);
-}
-
-.services .container {
-  padding-top: 65px;
-  display: grid;
-}
-
 .dark {
   color: var(--basic-black);
   margin: 0;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.services {
+  background: rgba(241, 245, 247, 1);
+}
+
+.services__container {
+  padding-top: 65px;
+  display: grid;
+}
+
 .services__options {
   display: grid;
-  grid-template-columns: 240px repeat(2, auto);
+  grid-template-columns: 240px auto;
   margin-top: 70px;
 }
 
 .services__list {
-  list-style: none;
-  margin: 0 0 100px 0;
-  padding: 0;
+  width: 240px;
   position: relative;
+  margin-bottom: 100px;
 }
 
 .services__list::after {
-  /*доделать*/
+  content: "";
+  position: absolute;
+  top: -48px;
+  right: 0;
+  width: 10px;
+  height: 279px;
+  background-image: url("../img/shadow-line.png");
 }
 
 .services__item {
-  width: 240px;
+  display: block;
   height: 60px;
+  line-height: 60px;
+  padding-left: 22px;
   background-color: var(--basic-blue);
   box-shadow: 0 1px 0 #293449, inset 0 1px 0 #405069;
   margin-bottom: 1px;
+  color: #fff;
+  font-family: 'Cuprum', sans-serif;
+  font-weight: 700;
+  font-size: 21px;
 }
+
+.description__delivery {
+  display: none;
+  padding-left: 80px;
+  background-image: url("../img/delivery.png");
+  background-size: 468px 261px;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+}
+
+.description__guarantee {
+  display: none;
+  padding-left: 80px;
+  background-image: url("../img/guarantee.png");
+  background-size: 389px 283px;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+}
+
+.description__credit {
+  display: none;
+  padding-left: 80px;
+  background-image: url("../img/credit.png");
+  background-size: 465px 285px;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+}
+
+.service_delivery:checked ~ .services__list label[for="service-delivery"],
+.service_guarantee:checked ~ .services__list label[for="service-guarantee"],
+.service_credit:checked ~ .services__list label[for="service-credit"] {
+  color: var(--basic-blue);
+  background-color: var(--basic-white);
+  box-shadow: none;
+}
+
+.service_delivery:checked ~ .description__delivery,
+.service_guarantee:checked ~ .description__guarantee,
+.service_credit:checked ~ .description__credit {
+  display: block;
+}
+
+.service__title {
+  color: var(--basic-blue);
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/*Удалить ниже*/
+.services .container {
+  padding-top: 65px;
+  display: grid;
+}
+
+
+
+/*.services__options {*/
+/*  display: grid;*/
+/*  grid-template-columns: 240px repeat(2, auto);*/
+/*  margin-top: 70px;*/
+/*}*/
+
+/*.services__list {*/
+/*  list-style: none;*/
+/*  margin: 0 0 100px 0;*/
+/*  padding: 0;*/
+/*  position: relative;*/
+/*}*/
+
 
 .services__link {
   font-weight: 700;
@@ -586,22 +676,18 @@ img {
   z-index: 1;
 }
 
-.services__options__title {
-  margin: 0;
-}
+/*.services__options__title {*/
+/*  margin: 0;*/
+/*}*/
 
-.service__title {
-  color: var(--basic-blue);
-  font-size: 30px;
-  line-height: 30px;
-  text-transform: uppercase;
-}
+
 
 .service__description {
   font-family: 'PT Sans', sans-serif;
   font-size: 13px;
   line-height: 24px;
   margin-top: 30px;
+  margin-bottom: 27px;
 }
 
 .service__img {
@@ -610,6 +696,7 @@ img {
   justify-self: end;
   align-self: end;
 }
+/*Удалить выше*/
 
 .column-layout {
   display: grid;
