@@ -26,6 +26,7 @@ img {
 }
 
 .page-body {
+  position: relative;
   color: var(--basic-black);
   font-family: 'Cuprum', sans-serif;
   font-size: 18px;
@@ -82,6 +83,21 @@ img {
 
 .header-list li:last-child {
   background-color: var(--basick-green);
+}
+
+.header-bookmark {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  /*gap: 9px;*/
+}
+
+.header-bookmark::before {
+  content: '';
+  width: 14px;
+  height: 16px;
+  background-color: tomato;
+  justify-items: center;
+  align-items: center;
 }
 
 .header-search {
@@ -587,6 +603,7 @@ img {
   font-family: 'Cuprum', sans-serif;
   font-weight: 700;
   font-size: 21px;
+  cursor: pointer;
 }
 
 .description__delivery {
@@ -859,4 +876,109 @@ img {
   line-height: 18px;
   color: var(--basic-yellow);
   text-decoration: none;
+}
+
+.overlay {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.modal__write-form {
+  position: fixed;
+  display: none;
+  grid-template-columns: auto auto;
+  grid-template-rows: repeat(4, min-content);
+  gap: 11px 20px;
+  width: 620px;
+  height: 430px;
+  padding: 45px 80px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  box-sizing: border-box;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+  border-top: 7px solid var(--basic-red);
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+}
+
+.write-form__input {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  box-sizing: border-box;
+  border: 2px solid #C5C5C5;
+  border-radius: 2px;
+  padding: 6px 12px;
+}
+
+.write-form__input:focus {
+  outline: none;
+  border: 2px solid #7d7d7d;
+}
+
+.write-form__input_textarea {
+  width: 460px;
+  height: 114px;
+  resize: none;
+  grid-column: 1 / 3;
+}
+
+.write-form__wrapper {
+  background-color: #F4F4F4;
+  width: 100%;
+  height: 112px;
+  position: absolute;
+  bottom: 0;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.write-form__wrapper button {
+  width: 460px;
+  height: 38px;
+  border: none;
+  cursor: pointer;
+}
+
+.modal__closing {
+  position: absolute;
+  top: 14px;
+  right: 11px;
+  border: none;
+  background-color: transparent;
+  width: 21px;
+  height: 21px;
+  cursor: pointer;
+  padding: 0;
+
+}
+
+.modal__closing_map {
+  top: 0;
+  right: -30px;
+}
+
+.modal__map {
+  position: fixed;
+  display: none;
+  width: 945px;
+  height: 450px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  box-sizing: border-box;
+  background-color: var(--basic-white);
+  border-top: 7px solid var(--basic-red);
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
 }
